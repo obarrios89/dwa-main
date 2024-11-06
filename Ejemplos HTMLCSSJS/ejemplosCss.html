@@ -1,0 +1,318 @@
+
+### . Estilos y Clases
+
+**Ejemplo:**
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Estilos en HTML</title>
+    <style>
+        .destacado {
+            color: red;
+            font-weight: bold;
+        }
+        #parrafoEspecial {
+            background-color: yellow;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Texto Destacado</h2>
+    <p class="destacado">Este texto está en rojo y en negrita.</p>
+
+    <h2>Párrafo Especial</h2>
+    <p id="parrafoEspecial">Este párrafo tiene un fondo amarillo y un poco de relleno.</p>
+</body>
+</html>
+```
+
+**Ejercicio:**
+1. Crea una página con dos estilos personalizados: uno para un texto en negrita y otro para un fondo de color en un párrafo.
+
+Estos ejemplos y ejercicios te ayudarán a familiarizarte con las etiquetas HTML más comunes y cómo usarlas en diferentes contextos. ¡Buena suerte y diviértete aprendiendo HTML!
+
+
+¡Claro! Aquí tienes una serie de ejemplos y ejercicios de CSS que cubren diferentes tipos de estilos, selectores y usos. Estos ejemplos te ayudarán a comprender cómo aplicar CSS para estilizar tus páginas web.
+
+### 1. **Selectores Básicos**
+
+**Ejemplo:**
+
+```html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selectores Básicos</title>
+    <style>
+        /* Selector de elemento */
+        p {
+            color: blue;
+            font-size: 16px;
+        }
+
+        /* Selector de clase */
+        .highlight {
+            background-color: yellow;
+            font-weight: bold;
+        }
+
+        /* Selector de ID */
+        #special {
+            color: red;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <p>Este es un párrafo.</p>
+    <p class="highlight">Este párrafo está resaltado.</p>
+    <p id="special">Este párrafo tiene un estilo especial.</p>
+</body>
+</html>
+```
+
+**Ejercicio:**
+
+1. Crea una página HTML con al menos tres elementos de texto (por ejemplo, encabezados y párrafos).
+2. Aplica diferentes estilos usando selectores de elemento, clase e ID.
+3. Cambia el color, el tamaño de la fuente y el estilo del texto para cada elemento.
+
+---
+
+### 2. **Selectores Avanzados**
+
+**Ejemplo:**
+
+```html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selectores Avanzados</title>
+    <style>
+        /* Selector de atributo */
+        input[type="text"] {
+            border: 1px solid gray;
+            padding: 5px;
+        }
+
+        /* Selector de hijo directo */
+        ul > li {
+            list-style-type:square;
+        }
+
+        /* Selector de descendiente */
+        div p {
+            color: green;
+        }
+
+        /* Selector de adyacencia */
+        h2 + p {
+            font-size:medium;
+        }
+
+        /* Selector de grupo */
+        h1, h2, h3 {
+            font-family:'Courier New', Courier, monospace;
+        }
+    </style>
+</head>
+<body>
+    <h1>Título 1</h2>
+    <div>
+        <p>Este párrafo está dentro de un div.</p>
+        <p>Este párrafo está dentro de un div.</p>
+    </div>
+    <ul>
+        <li>Elemento 1</li>
+        <li>Elemento 2</li>
+    </ul>
+    <h2>Título 2</h2>
+    <p>Párrafo adyacente a un título.</p>
+    <input type="text" placeholder="Escribe aquí">
+    <h3>Título 3</h3>
+
+</body>
+</html>
+```
+
+**Ejercicio:**
+
+1. Crea una página HTML con una lista desordenada, varios párrafos dentro de un div y algunos elementos de entrada (input).
+2. Aplica estilos usando selectores avanzados como los de atributo, hijo directo, descendiente, adyacente y de grupo.
+3. Ajusta los estilos según sea necesario para ver cómo afectan a los elementos seleccionados.
+
+---
+
+### 3. **Estilos de Texto y Fondo**
+
+**Ejemplo:**
+
+```html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estilos de Texto y Fondo</title>
+    <style>
+        body {
+            background-color: #f0f0f0;
+            font-family: 'Arial', sans-serif;
+        }
+
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+
+        p {
+            color: #666;
+            line-height: 1.5;
+        }
+
+        .box {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            padding: 20px;
+            margin: 10px;
+            border-radius: 8px;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Bienvenido a mi sitio web</h1>
+    <div class="box">
+        <p class="text-center">Este es un párrafo dentro de una caja con fondo blanco.</p>
+    </div>
+</body>
+</html>
+```
+
+**Ejercicio:**
+
+1. Crea una página HTML que incluya encabezados, párrafos y un contenedor (div) con fondo.
+2. Ajusta los estilos de texto (color, alineación, tamaño, etc.) y el fondo (color, bordes, padding) para cada elemento.
+3. Experimenta con diferentes propiedades como `line-height`, `text-align`, `border-radius`, y `background-color`.
+
+---
+
+### 4. **Diseño y Posicionamiento**
+
+**Ejemplo:**
+
+```html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diseño y Posicionamiento</title>
+    <style>
+        .container {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 100vh;
+            background-color: #fafafa;
+        }
+
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: #4CAF50;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+        }
+
+        .box:nth-child(2) {
+            background-color: #2196F3;
+        }
+
+        .box:nth-child(3) {
+            background-color: #f44336;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">Caja 1</div>
+        <div class="box">Caja 2</div>
+        <div class="box">Caja 3</div>
+    </div>
+</body>
+</html>
+```
+
+**Ejercicio:**
+
+1. Crea una página HTML con un contenedor principal y varios elementos hijos.
+2. Usa Flexbox para distribuir los elementos dentro del contenedor de manera horizontal y centrar su contenido.
+3. Ajusta el tamaño, color de fondo y borde de los elementos para experimentar con el diseño y posicionamiento.
+
+---
+
+### 5. **Transiciones y Animaciones**
+
+**Ejemplo:**
+
+```html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transiciones y Animaciones</title>
+    <style>
+        .box {
+            width: 150px;
+            height: 150px;
+            background-color: #FF5722;
+            transition: background-color 0.5s, transform 0.5s;
+        }
+
+        .box:hover {
+            background-color: #FFC107;
+            transform: scale(1.2);
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .spin {
+            width: 100px;
+            height: 100px;
+            background-color: #009688;
+            animation: spin 2s linear infinite;
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+    <div class="spin"></div>
+</body>
+</html>
+```
+
+**Ejercicio:**
+
+1. Crea una página HTML con un elemento que cambie de color y tamaño cuando se pasa el ratón sobre él usando transiciones.
+2. Agrega otro elemento que realice una animación de rotación continua utilizando `@keyframes`.
+3. Experimenta con diferentes duraciones y tipos de animación para ver cómo afectan a los elementos.
+
+Estos ejemplos y ejercicios te proporcionarán una buena base para entender cómo aplicar y experimentar con CSS. ¡Diviértete codificando!
