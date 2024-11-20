@@ -17,21 +17,57 @@ function crearElemento(elemento) {
     agregarFila(elemento);
 }
 
-function agregarFila(elemento) {
-    const tabla = document.getElementById('dataTable').querySelector('tbody');
-    const fila = document.createElement('tr');
+async function agregarFila(elemento) {
 
-    fila.innerHTML = `
-        <td data-label="Nombre">${elemento.nombre}</td>
-        <td data-label="Edad">${elemento.edad}</td>
-        <td data-label="Email">${elemento.email}</td>
-        <td data-label="Acciones">
-            <button onclick="editarElemento(this)">Editar</button>
-            <button onclick="eliminarElemento(this)">Eliminar</button>
-        </td>
-    `;
-    
-    tabla.appendChild(fila);
+    const nombre = document.getElementById('nombre').value;
+    const edad = document.getElementById('edad').value;
+    const email = document.getElementById('email').value;
+
+    try {
+ 
+        const response = await fetch('http://localhost/dwa/api/create.php', { 
+            method: 'POST',
+            /*headers: {
+                'Content-Type': 'application/json'
+            },*/
+            body: JSON.stringify({
+                nombre: nombre,
+                edad: edad,
+                email: email,
+            })
+        });
+
+        const data = await response.json();
+ 
+        if (response.ok) {
+            const tabla = document.getElementById('dataTable').querySelector('tbody');
+            const fila = document.createElement('tr');
+        
+            fila.innerHTML = `
+                <td data-label="Nombre">${elemento.nombre}</td>
+                <td data-label="Edad">${elemento.edad}</td>
+                <td data-label="Email">${elemento.email}</td>
+                <td data-label="Acciones">
+                    <button onclick="editarElemento(this)">Editar</button>
+                    <button onclick="eliminarElemento(this)">Eliminar</button>
+                </td>
+            `;
+            
+            tabla.appendChild(fila);
+
+        } else {
+
+            document.getElementById('message').textContent = data.message || 'Error al iniciar sesión';
+            document.getElementById('message').style.color = 'red';
+
+        }
+    } catch (error) {
+        console.error('Error:', error);
+        document.getElementById('message').textContent = "Amigo hay un error disculpame";
+        document.getElementById('message').style.color = 'red';
+    }
+
+
 }
 
 function editarElemento(boton) {

@@ -23,8 +23,9 @@ document.getElementById('formLogin').addEventListener('submit', async function (
         if (response.ok) {
             //document.getElementById('parrafo').textContent ="login"
             //localStorage.setItem('token', data.token); // Guardar el token en localStorage
-            alert("Inicio de sesión exitoso")
-          
+            //alert(data.token)
+            window.location.href = 'crud/index.html'; //relative to domain
+
         } else {
 
             document.getElementById('message').textContent = data.message || 'Error al iniciar sesión';
