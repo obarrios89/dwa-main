@@ -6,18 +6,14 @@ document.getElementById('abmForm').addEventListener('submit', function (event) {
     const edad = document.getElementById('edad').value;
     const email = document.getElementById('email').value;
 
-    const nuevoElemento = { nombre, edad, email };
-
+   
     // Simulando llamada a API para alta
-    crearElemento(nuevoElemento);
+    agregarFila();
 });
 
-function crearElemento(elemento) {
-    // Simulación de API (puedes reemplazar con fetch/axios para llamada real)
-    agregarFila(elemento);
-}
 
-async function agregarFila(elemento) {
+
+async function agregarFila() {
 
     const nombre = document.getElementById('nombre').value;
     const edad = document.getElementById('edad').value;

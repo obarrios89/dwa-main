@@ -14,7 +14,7 @@ if (!isset($data['username']) || !isset($data['password'])) {
     echo json_encode(['message' => 'Faltan datos de usuario o contraseña']);
     http_response_code(400);
     exit();
-}
+} 
 
 $username = $data['username'];
 $password = $data['password'];
